@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Animated Progress Bar</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .progress {
+      position: relative;
+    }
+    .progress-label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="progress" style="height: 30px;">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+         role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" 
+         style="width: 0%;" id="progressBar"></div>
+    <span class="progress-label pt-3" id="progressLabel">0%</span>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  function animateProgressBar() {
+    var progressBar = document.getElementById('progressBar');
+    var progressLabel = document.getElementById('progressLabel');
+    var width = 0;
+    var interval = setInterval(function() {
+      if (width >= 100) {
+        clearInterval(interval);
+      } else {
+        width++;
+        progressBar.style.width = width + '%';
+        progressBar.setAttribute('aria-valuenow', width);
+        progressLabel.innerText = width + '%';
+      }
+    }, 50);
+  }
+
+  // Start the animation when the page loads
+  window.onload = animateProgressBar;
+</script>
+
+</body>
+</html>

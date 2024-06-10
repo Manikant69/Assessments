@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Marko One", serif;  
+}
+.text-center{
+    text-align: center;
+}
+.italic{
+    font-style: italic;
+}
+
+.page{
+    min-width: 100%;
+    min-height: 100%;
+    background-color:rgba(245, 126, 21, 0.65);
+    background-image: url(rose.png);
+    background-position-y: 72%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.header{
+    background-color:rgb(246, 228, 194, 0.5);
+    background-image: url(dot.png);
+    background-repeat: repeat-x;
+    background-position-x:9.8% ;
+    width: 90%;
+    margin: auto;
+}
+.heading{
+    color: rgb(128, 0, 128);
+    padding-top: 3.5rem;
+}
+
+.header h3{
+    display: inline;
+}
+
+.address{
+    padding-top: 1.4rem;
+}
+
+.timming{
+    padding: 0.6rem;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+}
+
+.links a{
+    text-decoration: none;
+    margin: 0.2rem;
+}
+
+.content{
+    margin: 0 5% 0 5%;
+}
+
+.title{
+    text-align: center;
+    color: rgb(255, 106, 0);
+    text-transform:uppercase;
+    letter-spacing: 1rem;
+    font-style: bold;
+}
+
+.content p{
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#appetizers{
+    margin-top: 2rem;
+}
+
+.para1{
+    margin: 1rem 0 1rem 0;
+}
+
+
